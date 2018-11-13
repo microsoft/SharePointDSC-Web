@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>SharePointDSC</title>
+        <link rel="stylesheet" type="text/css"href="styles/spdsc.css">
+        <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="scripts/spdsc.js"></script>
+    </head>
+    <body>
+        <div id="spdsc-topbar"><a href="#">SharePointDSC</a></div>
+
+        <div id="spdsc-formcontent">
+
+            <h2>SharePoint Details</h2>
+            <div class="spdsc-question">
+                <label for="radSharePointVersion">What version of SharePoint are you trying to deploy?</label><br />
+                2016
+                <input type="radio" id="radSharePointVersion" name="radSharePointVersion" value="2016" />
+                2019
+                <input type="radio" id="radSharePointVersion" name="radSharePointVersion" value="2019" checked />
+            </div>
+
+            <h2>Certificate Details</h2>
+            <div class="spdsc-question">
+                <label for="txtCertificatePath">Path of the CER certificate file used to encrypt credentials</label><br />
+                <input type="text" name="txtCertificatePath" id="txtCertificatePath" class="spdsc-widetextbox" />
+            </div>
+            <div class="spdsc-question">
+                <label for="txtCertificateThumbprint">Thumbprint of the certificate uesd to decrypt credentials</label><br />
+                <input type="text" name=txtCertificateThumbprint" id="txtCertificateThumbprint" class="spdsc-widetextbox" />
+            </div>
+
+            <h2>Servers in the Farm</h2>
+            <div class="spdsc-question">
+                <table id="tblServerNodes">
+                    <tr>
+                        <th>Server Name</th>
+                        <th>MinRole</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="txtServerName1" /></td>
+                        <td>
+                            <select id="ddlMinRole1">
+                                <option value="Application">Application</option>
+                                <option value="ApplicationWithSearch">Application with Search</option>
+                                <option value="Custom">Custom</option>
+                                <option value="DistributedCache">Distributed Cache</option>
+                                <option value="Search">Search</option>
+                                <option value="SingleServerFarm">Single Server Farm</option>
+                                <option value="WebFrontEndWithDistributedCache">Web Front-End with Distributed Cache</option>
+                                <option value="WebFrontEnd">Web Front-End</option>
+                            </select>
+                        </td>
+                        <td><a href="#" id="spdsc-addserver1" class="spdsc-addnode" onclick="AddServerNode(1)"><img src="images/plusicon.png" alt="Add a Server to the Farm" /></a></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <h2>Local Configuration Manager (LCM) settings</h2>
+            <div class="spdsc-question">
+                <label for="chckAllowReboot">Allow the machine to reboot automatically during configuration?</label><br />
+                Yes
+                <input type="radio" id="radAllowReboot" name="radAllowReboot" value="Yes" checked />
+                No
+                <input type="radio" id="radAllowReboot" name="radAllowReboot" value="No" />
+            </div>
+            <div class="spdsc-question">
+                    <label for="ddlLCMActionAfterReboot">Action After Reboot:</label><br />
+                    <select id="ddlLCMActionAfterReboot" name="ddlLCMActionAfterReboot">
+                        <option value="ContinueConfiguration">Continue Configuration</option>
+                        <option value="StopConfiguration">Stop Configuration</option>
+                    </select>
+                </div>
+            <div class="spdsc-question">
+                <label for="ddlLCMConfigurationMode">LCM Configuration Mode:</label><br />
+                <select id="ddlLCMConfigurationMode" name="ddlLCMConfigurationMode">
+                    <option value="ApplyOnly">Apply Only</option>
+                    <option value="ApplyAndMonitor" selected>Apply and Monitor</option>
+                    <option value="ApplyAndAutocorrect">Apply and Autocorrect</option>
+                </select>
+            </div>
+            <div class="spdsc-question">
+                    <label for="ddlLCMConfigurationMode">Configuration Mode Frequency in Minutes:</label><br />
+                    <input type="text" name="txtConfigModeFrequency" id="txtConfigModeFrequency" class="spdsc-smalltextbox" value="15" />
+            </div>
+
+            <h2>Installation</h2>
+            <div class="spdsc-question">
+                <label for="txtBinariesLocation">Where is the network share that hosts the binaries directory?</label><br />
+                <input type="text" id="txtBinariesLocation" class="spdsc-widetextbox" />
+            </div>
+        </div>
+    </body>
+</html>

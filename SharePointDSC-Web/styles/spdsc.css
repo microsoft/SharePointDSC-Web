@@ -1,0 +1,63 @@
+h2{
+    font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+#spdsc-topbar
+{
+    width:100%;
+    background-color: black;
+    height: 35px;
+    top:0px;
+    left:0px;
+    position: absolute;
+}
+
+#spdsc-topbar a{
+    color: #fff;
+    top:7px;
+    left: 10px;
+    text-decoration: none;
+    font-weight:bold;
+    position:relative;
+    font-size: 120%;
+}
+
+#spdsc-formcontent{
+    position:absolute;
+    width:100%;
+    top:35px;
+}
+
+.spdsc-question{
+    margin-bottom:25px;
+}
+
+.spdsc-question label{
+    font-weight:600;
+    font-size:120%;
+    font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    margin-bottom:10px;
+}
+.spdsc-addnode img{
+    text-decoration:none;
+}
+
+/* Controls */
+input[type="text"], select
+{    
+    height:35px;
+}
+input[type="radio"]
+{
+    height:25px;
+    width:25px;
+}
+.spdsc-widetextbox
+{
+    width:450px;
+}
+
+.spdsc-smalltextbox
+{
+    width:100px;
+}
