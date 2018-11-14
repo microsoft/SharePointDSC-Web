@@ -73,7 +73,7 @@ function GenerateFiles()
             }
         };
     }
-    catch{
+    catch(err){
         rawFile.open("GET", dir + "/powershell/SharePointDSC.ps1", false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
