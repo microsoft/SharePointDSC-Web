@@ -3,9 +3,42 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DD9C88C-0C3E-47AF-B9DB-ADAFE2A3E04D}"
+	ProjectSection(SolutionItems) = preProject
+		SharePointDSC-Web\index.html = SharePointDSC-Web\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9FBDE8A1-80B7-49E2-BA2D-2280667A1A8D}"
+	ProjectSection(SolutionItems) = preProject
+		SharePointDSC-Web\images\checkmark.png = SharePointDSC-Web\images\checkmark.png
+		SharePointDSC-Web\images\plusicon.png = SharePointDSC-Web\images\plusicon.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{C50AD8E7-D470-4F2A-B971-87C49CED44B5}"
+	ProjectSection(SolutionItems) = preProject
+		SharePointDSC-Web\scripts\jquery-3.3.1.min.js = SharePointDSC-Web\scripts\jquery-3.3.1.min.js
+		SharePointDSC-Web\scripts\spdsc.js = SharePointDSC-Web\scripts\spdsc.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "styles", "styles", "{8F2DAD58-6C09-4201-A03C-301B3CBC6055}"
+	ProjectSection(SolutionItems) = preProject
+		SharePointDSC-Web\styles\spdsc.css = SharePointDSC-Web\styles\spdsc.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "powershell", "powershell", "{3A0E7B18-A5D4-437B-B5DA-569A3E7AA997}"
+	ProjectSection(SolutionItems) = preProject
+		SharePointDSC-Web\powershell\SharePointDSC.ps1 = SharePointDSC-Web\powershell\SharePointDSC.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9FBDE8A1-80B7-49E2-BA2D-2280667A1A8D} = {8DD9C88C-0C3E-47AF-B9DB-ADAFE2A3E04D}
+		{C50AD8E7-D470-4F2A-B971-87C49CED44B5} = {8DD9C88C-0C3E-47AF-B9DB-ADAFE2A3E04D}
+		{8F2DAD58-6C09-4201-A03C-301B3CBC6055} = {8DD9C88C-0C3E-47AF-B9DB-ADAFE2A3E04D}
+		{3A0E7B18-A5D4-437B-B5DA-569A3E7AA997} = {8DD9C88C-0C3E-47AF-B9DB-ADAFE2A3E04D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC97983F-F3F7-4DF7-81F8-AB4032E0B09F}
