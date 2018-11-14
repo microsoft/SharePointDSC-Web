@@ -54,3 +54,29 @@ function Toggle(sectionName, show)
         $("#" + sectionName).hide();
     }
 }
+
+function GenerateFiles()
+{
+    var reader = new FileReader();
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    /*alert(dir);
+    reader.readAsText("file:///c:/github/sharepointdsc-web/sharepointdsc-web/powershell/SharePointDSC.ps1", "UTF-8");
+    reader.onload = function (evt) {
+        alert(evt.target.result);
+    }*/
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", "file://" + dir + "/powershell/SharePointDSC.ps1", false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
