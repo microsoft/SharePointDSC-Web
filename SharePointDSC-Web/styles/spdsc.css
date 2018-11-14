@@ -2,6 +2,15 @@ h2{
     font-family: Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
 
+th{
+    background-color:silver;
+}
+
+td{
+    border:1px solid black;
+    text-align:center;
+}
+
 #spdsc-topbar
 {
     width:100%;
@@ -42,10 +51,23 @@ h2{
     text-decoration:none;
 }
 
+#spdsc-section-customsolution
+{
+    display: none;
+}
+
 /* Controls */
 input[type="text"], select
 {    
     height:35px;
+}
+table input[type='text']
+{
+    width:100%;
+}
+input[type="checkbox"]{
+    height:35px;
+    width:35px;
 }
 input[type="radio"]
 {
