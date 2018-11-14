@@ -60,7 +60,6 @@ function GenerateFiles()
     var reader = new FileReader();
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
-    alert(dir);
     var rawFile = new XMLHttpRequest();
     try {
         rawFile.open("GET", "file://" + dir + "/powershell/SharePointDSC.ps1", false);
@@ -74,7 +73,7 @@ function GenerateFiles()
         };
     }
     catch(err){
-        rawFile.open("GET", dir + "/powershell/SharePointDSC.ps1", false);
+        rawFile.open("GET", windows.location.href + "powershell/SharePointDSC.ps1", false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
                 if (rawFile.status === 200 || rawFile.status === 0) {
