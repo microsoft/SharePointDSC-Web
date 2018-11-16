@@ -207,6 +207,50 @@
                     </tr>
                 </table>
             </section>
+
+            <h2>Web Applications</h2>
+            <div class="spdsc-question">
+                <label>What web applications should be configured in the farm?</label><br />
+                <table id="spdsc-table-webapplications">
+                    <tr>
+                        <th>Name</th>
+                        <td><input type="text" id="txtWebAppName1" /></td>
+                    </tr>
+                    <tr>
+                        <th>Application Pool</th>
+                        <td><input type="text" id="txtWebAppApplicationPool1" /></td>
+                    </tr>
+                    <tr>
+                        <th>Application Pool Account</th>
+                        <td><input type="text" id="txtWebAppApplicationPoolAccount1" /></td>
+                    </tr>
+                    <tr>
+                        <th>Anonymous Access</th>
+                        <td><input type="checkbox" id="chckWebAppAnonymous1" /></td>
+                    </tr>
+                    <tr>
+                        <th>Authentication Mode</th>
+                        <td>
+                            <select id="ddlWebAppAuthenticationMode1">
+                                <option value="NTLM">NTLM</option>
+                                <option value="Kerberos">Kerberos</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Url</th>
+                        <td><input type="text" id="txtWebAppUrl1" /></td>
+                    </tr>
+                    <tr>
+                        <th>Time Zone</th>
+                        <td>
+                            <select id="ddlWebAppTimeZone">
+
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <input type="button" id="btnGenerate" value="Generate" onclick="GenerateFiles();" />
         </div>
     </body>
