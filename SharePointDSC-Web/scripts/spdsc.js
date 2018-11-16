@@ -62,7 +62,7 @@ function GenerateFiles()
     var dir = loc.substring(0, loc.lastIndexOf('/'));
     var rawFile = new XMLHttpRequest();
     try {
-        rawFile.open("GET", "file://" + dir + "/powershell/SharePointDSC.ps1", false);
+        rawFile.open("GET", windows.location.href + "powershell/SharePointDSC.ps1", false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
                 if (rawFile.status === 200 || rawFile.status === 0) {
@@ -72,8 +72,8 @@ function GenerateFiles()
             }
         };
     }
-    catch(err){
-        rawFile.open("GET", windows.location.href + "powershell/SharePointDSC.ps1", false);
+    catch (err) {
+        rawFile.open("GET", "file://" + dir + "/powershell/SharePointDSC.ps1", false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
                 if (rawFile.status === 200 || rawFile.status === 0) {
